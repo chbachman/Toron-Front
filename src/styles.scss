@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/purple-green.css";
+@import '~normalize.css/normalize.css';
+
+$background-color: #333333;
+
+html, body {
+  background-color: $background-color;
+  height: 100%;
+}
