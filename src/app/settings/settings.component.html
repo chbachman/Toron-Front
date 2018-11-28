@@ -1,0 +1,9 @@
+<mat-toolbar [ngClass]="toolbarStyle">
+  <button routerLink="/" mat-icon-button>
+    <mat-icon aria-label="Back">arrow_back</mat-icon>
+  </button>
+
+  Settings
+
+  <span *ngIf="show" [ngClass]="toolbarStyle"> {{show.title.english}} </span>
+</mat-toolbar>

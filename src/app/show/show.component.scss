@@ -1,0 +1,48 @@
+@import '~src/variables.scss';
+
+.banner-container {
+  overflow: hidden;
+
+  img.banner {
+    width: 100%;
+    height: auto;
+
+    transform: scale(1.5);
+  }
+
+  height: 120px;
+}
+
+.container {
+  margin: 10px;
+
+  mat-card {
+    background-color: darken($background-color, 2)
+  }
+}
+
+mat-toolbar {
+  background-color: transparent;
+  color: transparent;
+  position: fixed;
+  z-index: 1;
+  transition: all 0.5s;
+
+  &.bottom {
+    background-color: $background-color;
+    color: $text-color;
+  }
+
+  button {
+    background-color: rgba($background-color, .7);
+  }
+
+  span {
+    color: transparent;
+    transition: all 0.5s;
+
+    &.bottom {
+      color: $text-color;
+    }
+  }
+}

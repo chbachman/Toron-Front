@@ -1,0 +1,39 @@
+<mat-toolbar [ngSwitch]="searchEnabled">
+  <div @searchTrigger *ngSwitchCase="false" class="toolbar-container">
+    <button routerLink="/settings" mat-icon-button>
+      <mat-icon aria-label="Back">settings</mat-icon>
+    </button>
+
+    {{title}}
+
+    <span class="fill"></span>
+
+    <button (click)="toggleSearch()" mat-icon-button>
+      <mat-icon aria-label="Search">search</mat-icon>
+    </button>
+  </div>
+
+  <div @searchTrigger *ngSwitchCase="true" class="toolbar-container">
+    <mat-form-field [floatLabel]="'never'">
+      <input matInput #search>
+    </mat-form-field>
+
+    <button (click)="toggleSearch()" mat-icon-button>
+      <mat-icon aria-label="Close">close</mat-icon>
+    </button>
+
+  </div>
+
+</mat-toolbar>
+
+<mat-nav-list>
+  <h3 *ngIf="!searchEnabled" mat-subheader>Most Popular</h3>
+  <mat-list-item *ngFor="let show of shows">
+    <img matListAvatar
+         src="{{show.coverImage.medium}}"
+         alt="{{show.title.english}}"
+    >
+    <a routerLink="/show/{{show.id}}" mat-line>{{show.title.english}}</a>
+    <mat-icon>chevron_right</mat-icon>
+  </mat-list-item>
+</mat-nav-list>

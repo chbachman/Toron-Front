@@ -1,3 +1,35 @@
-<p>
-  show works!
-</p>
+<mat-toolbar [ngClass]="toolbarStyle">
+  <button routerLink="/" mat-icon-button>
+    <mat-icon aria-label="Back">arrow_back</mat-icon>
+  </button>
+  <span *ngIf="show" [ngClass]="toolbarStyle"> {{show.title.english}} </span>
+</mat-toolbar>
+
+<div *ngIf="show" class="banner-container">
+  <img
+    class="banner"
+    src="{{show.bannerImage}}"
+  />
+</div>
+
+<div *ngIf="show" class="container">
+  <h2>{{show.title.english}}</h2>
+
+  <h5>Description</h5>
+  <mat-card>
+    <mat-card-content [innerHTML]="show.description"></mat-card-content>
+  </mat-card>
+
+  <h5>Scores</h5>
+  <mat-card>
+    <mat-card-content>
+      <chart [type]="type" [data]="data" [options]="options"></chart>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-nav-list>
+    <a mat-list-item *ngFor="let discussion of discussions" href="{{discussion.full_link}}">
+      Episode {{ discussion.episode.start }}
+    </a>
+  </mat-nav-list>
+</div>
