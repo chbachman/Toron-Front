@@ -1,7 +1,8 @@
 import {Component, HostListener, OnInit} from '@angular/core'
-import { Discussion, ShowInfo } from '../show'
+import {Discussion, ShowInfo} from '../show'
 import {ActivatedRoute} from '@angular/router'
 import {ToronBackendService} from '../toron-backend.service'
+import {Preference, ToronPreferencesService} from '../toron-preferences.service'
 
 @Component({
   selector: 'app-show',
@@ -32,7 +33,7 @@ export class ShowComponent implements OnInit {
     }
   }
 
-  constructor(private route: ActivatedRoute, private backend: ToronBackendService) { }
+  constructor(private route: ActivatedRoute, private backend: ToronBackendService, private preferences: ToronPreferencesService) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(map => {
@@ -42,6 +43,7 @@ export class ShowComponent implements OnInit {
 
   getShows(id: number) {
     this.backend.getShow(id).subscribe(show => {
+      console.log(show.showInfo.idMal)
       this.show = show.showInfo
       this.discussions = show.discussion
       this.data = {
@@ -52,6 +54,14 @@ export class ShowComponent implements OnInit {
           borderColor: '#FFFFFF'
         }],
       }
+
+      this.preferences.get<string>(Preference.ApiType).subscribe(preference => {
+        if (preference === 'MyAnimeList') {
+          this.backend.getMALShow(show.showInfo.idMal).subscribe(malShow => {
+            this.show.description = malShow.synopsis
+          })
+        }
+      })
     })
   }
 

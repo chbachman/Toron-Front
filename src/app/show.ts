@@ -64,3 +64,10 @@ export class Show {
   showInfo: ShowInfo
   discussion: Discussion[]
 }
+
+export class MALShow {
+  url: string
+  title: string
+  title_english: string
+  synopsis: string
+}

@@ -1,9 +1,10 @@
 import { from, Observable, of } from 'rxjs'
 import { Injectable } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
-import { Show, ShowInfo } from './show'
+import { MALShow, Show, ShowInfo } from './show'
 import { NgForageCache } from 'ngforage'
 import { concatMap, map, tap } from 'rxjs/operators'
+import {Preference, ToronPreferencesService} from './toron-preferences.service'
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,7 @@ export class ToronBackendService {
   constructor(private http: HttpClient, private cache: NgForageCache) { }
 
   baseUrl = 'http://10.0.0.216:8080/api'
+  malUrl = 'https://api.jikan.moe/v3/anime'
 
   private createCache<T>(key: string, produce: () => Observable<T>): Observable<T> {
     return from(this.cache.getCached<T>(key))
@@ -42,6 +44,12 @@ export class ToronBackendService {
   getShow(id: number): Observable<Show> {
     return this.createCache(`show-${id}`,
       () => this.http.get<Show>(`${this.baseUrl}/show/${id}`)
+    )
+  }
+
+  getMALShow(id: number): Observable<MALShow> {
+    return this.createCache(`mal-${id}`,
+      () => this.http.get<MALShow>(`${this.malUrl}/${id}`)
     )
   }
 }

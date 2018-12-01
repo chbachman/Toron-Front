@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
 import { ChartModule } from 'angular2-chartjs'
+import { FormsModule } from '@angular/forms'
 
 import { MatListModule } from '@angular/material/list'
 import { MatMenuModule } from '@angular/material/menu'
@@ -38,6 +39,7 @@ import { environment } from '../environments/environment'
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
     MatIconModule,
     MatListModule,
     MatMenuModule,
