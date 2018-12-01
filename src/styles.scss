@@ -7,8 +7,10 @@ html, body {
   height: 100%;
 }
 
-html {
-  transform: scale(-1, -1);
+div.invert {
+  a, h1, h2, h3, h4, h5, img, mat-card-content {
+    transform: scale(-1, -1);
+  }
 }
 
 * {

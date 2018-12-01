@@ -1,9 +1,20 @@
-<mat-toolbar [ngClass]="toolbarStyle">
+<mat-toolbar>
   <button routerLink="/" mat-icon-button>
     <mat-icon aria-label="Back">arrow_back</mat-icon>
   </button>
 
   Settings
-
-  <span *ngIf="show" [ngClass]="toolbarStyle"> {{show.title.english}} </span>
 </mat-toolbar>
+
+<div class="container">
+
+  <h4> API Settings </h4>
+
+  <form>
+    <mat-radio-group>
+      <mat-radio-button value="1">Option 1</mat-radio-button>
+      <mat-radio-button value="2">Option 2</mat-radio-button>
+    </mat-radio-group>
+  </form>
+</div>
+
