@@ -1,0 +1,71 @@
+{
+  "configVersion": 1,
+  "index": "/Toron-Front/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/Toron-Front/favicon.ico",
+        "/Toron-Front/index.html",
+        "/Toron-Front/main.31a5d2fbcd52402c162e.js",
+        "/Toron-Front/polyfills.c6871e56cb80756a5498.js",
+        "/Toron-Front/runtime.ec2944dd8b20ec099bf3.js",
+        "/Toron-Front/styles.e99394fbfe9427903a3a.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/Toron-Front/assets/icons/icon-128x128.png",
+        "/Toron-Front/assets/icons/icon-144x144.png",
+        "/Toron-Front/assets/icons/icon-152x152.png",
+        "/Toron-Front/assets/icons/icon-192x192.png",
+        "/Toron-Front/assets/icons/icon-384x384.png",
+        "/Toron-Front/assets/icons/icon-512x512.png",
+        "/Toron-Front/assets/icons/icon-72x72.png",
+        "/Toron-Front/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/Toron-Front/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/Toron-Front/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/Toron-Front/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/Toron-Front/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/Toron-Front/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/Toron-Front/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/Toron-Front/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/Toron-Front/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/Toron-Front/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "/Toron-Front/index.html": "80844409033b45f33dea9bb1cdfad28a15d98042",
+    "/Toron-Front/main.31a5d2fbcd52402c162e.js": "0fd993ee56acfaded89a0895d2bcc3592b5b1bc3",
+    "/Toron-Front/polyfills.c6871e56cb80756a5498.js": "ce68d153e9b9b6d26b625069c0ee99ae09c6f255",
+    "/Toron-Front/runtime.ec2944dd8b20ec099bf3.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "/Toron-Front/styles.e99394fbfe9427903a3a.css": "2b44437a53ad174dad54c5c4e797798a8410e80e"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
