@@ -13,7 +13,7 @@ import {Preference, ToronPreferencesService} from './toron-preferences.service'
 export class ToronBackendService {
   constructor(private http: HttpClient, private cache: NgForageCache) { }
 
-  baseUrl = 'http://10.0.0.216:8080/api'
+  baseUrl = 'https://api.chbachman.com/toron'
   malUrl = 'https://api.jikan.moe/v3/anime'
 
   private createCache<T>(key: string, produce: () => Observable<T>): Observable<T> {
