@@ -17,6 +17,6 @@ export class ToronPreferencesService {
   }
 
   get<T>(key: Preference): Observable<T> {
-    return from(this.cache.getItem(key))
+    return from(this.cache.getItem<T>(key))
   }
 }

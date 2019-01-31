@@ -11,13 +11,4 @@ import { trigger, style, animate, transition } from '@angular/animations'
 
 export class AppComponent {
   constructor() {}
-
-  inverted = false
-
-  // TODO: Remove this after project submission.
-  // TODO: Will also need to remove extra stuff in app.component.html
-  @HostListener('window:deviceorientation', ['$event'])
-  onKeyUp(event: DeviceOrientationEvent) {
-    this.inverted = event.beta < 0
-  }
 }

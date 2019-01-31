@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http'
 import { MALShow, Show, ShowInfo } from './show'
 import { NgForageCache } from 'ngforage'
 import { concatMap, map, tap } from 'rxjs/operators'
-import {Preference, ToronPreferencesService} from './toron-preferences.service'
+import { Preference, ToronPreferencesService } from './toron-preferences.service'
 
 @Injectable({
   providedIn: 'root'
@@ -35,9 +35,9 @@ export class ToronBackendService {
       )
   }
 
-  getList(): Observable<ShowInfo[]> {
+  getList(): Observable<Show[]> {
     return this.createCache('list',
-      () => this.http.get<ShowInfo[]>(this.baseUrl + '/list')
+      () => this.http.get<Show[]>(`${this.baseUrl}/list`)
     )
   }
 

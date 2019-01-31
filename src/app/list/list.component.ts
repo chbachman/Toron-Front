@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core'
 import { ToronBackendService } from '../toron-backend.service'
-import { ShowInfo } from '../show'
+import { Show } from '../show'
 import { animate, style, transition, trigger } from '@angular/animations'
 
 @Component({
@@ -23,7 +23,7 @@ import { animate, style, transition, trigger } from '@angular/animations'
 export class ListComponent implements OnInit {
   constructor(private backend: ToronBackendService) { }
 
-  shows: ShowInfo[]
+  shows: Show[]
   title = 'Toron'
   searchEnabled = false
 

@@ -44,11 +44,10 @@ export class EpisodeNumber {
 
 export class Discussion {
   author: string
-  created_utc: number
-  full_link: string
+  createdUtc: number
   id: string
-  num_comments: number
-  over_18: boolean
+  numComments: number
+  over18: boolean
   permalink: string
   score: number
   selftext: string
@@ -58,11 +57,12 @@ export class Discussion {
   showTitle: string
   episode: EpisodeNumber
   _self: boolean
+  rewatch: boolean
 }
 
 export class Show {
-  showInfo: ShowInfo
-  discussion: Discussion[]
+  info: ShowInfo
+  threads: Discussion[]
 }
 
 export class MALShow {

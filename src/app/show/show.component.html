@@ -28,8 +28,14 @@
   </mat-card>
 
   <mat-nav-list>
-    <a mat-list-item *ngFor="let discussion of discussions" href="{{discussion.full_link}}">
-      Episode {{ discussion.episode.start }}
+    <a mat-list-item *ngFor="let discussion of discussions" href="{{discussion.url}}">
+      Episode {{ discussion.episode.start }} - Season {{ discussion.season }}
+    </a>
+  </mat-nav-list>
+
+  <mat-nav-list>
+    <a mat-list-item *ngFor="let discussion of rewatch" href="{{discussion.url}}">
+      Rewatch Episode {{ discussion.episode.start }} - Season {{ discussion.season }}
     </a>
   </mat-nav-list>
 </div>

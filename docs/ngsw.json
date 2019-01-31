@@ -9,10 +9,10 @@
       "urls": [
         "/Toron-Front/favicon.ico",
         "/Toron-Front/index.html",
-        "/Toron-Front/main.31a5d2fbcd52402c162e.js",
-        "/Toron-Front/polyfills.c6871e56cb80756a5498.js",
-        "/Toron-Front/runtime.ec2944dd8b20ec099bf3.js",
-        "/Toron-Front/styles.e99394fbfe9427903a3a.css"
+        "/Toron-Front/main.d527a47c080dba2e9465.js",
+        "/Toron-Front/polyfills.b79c9d41d08722089ce4.js",
+        "/Toron-Front/runtime.b57bf819d5bdce77f1c7.js",
+        "/Toron-Front/styles.ae224ac21ff4b4674f6c.css"
       ],
       "patterns": []
     },
@@ -44,11 +44,11 @@
     "/Toron-Front/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/Toron-Front/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/Toron-Front/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "/Toron-Front/index.html": "80844409033b45f33dea9bb1cdfad28a15d98042",
-    "/Toron-Front/main.31a5d2fbcd52402c162e.js": "0fd993ee56acfaded89a0895d2bcc3592b5b1bc3",
-    "/Toron-Front/polyfills.c6871e56cb80756a5498.js": "ce68d153e9b9b6d26b625069c0ee99ae09c6f255",
-    "/Toron-Front/runtime.ec2944dd8b20ec099bf3.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
-    "/Toron-Front/styles.e99394fbfe9427903a3a.css": "2b44437a53ad174dad54c5c4e797798a8410e80e"
+    "/Toron-Front/index.html": "02c71cf5d3f5b60f1e86cab25782af03ac1ce200",
+    "/Toron-Front/main.d527a47c080dba2e9465.js": "a012ed19a932fd7378228834797f3b09d85b47a1",
+    "/Toron-Front/polyfills.b79c9d41d08722089ce4.js": "6946e10a03311677a01490b8e91741668e64e17e",
+    "/Toron-Front/runtime.b57bf819d5bdce77f1c7.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "/Toron-Front/styles.ae224ac21ff4b4674f6c.css": "32f2116beb0c13662b4749ce78d9ed8f5adb753b"
   },
   "navigationUrls": [
     {

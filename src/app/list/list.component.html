@@ -30,10 +30,10 @@
   <h3 *ngIf="!searchEnabled" mat-subheader>Most Popular</h3>
   <mat-list-item *ngFor="let show of shows">
     <img matListAvatar
-         src="{{show.coverImage.medium}}"
-         alt="{{show.title.english}}"
+         src="{{show.info.coverImage.medium}}"
+         alt="{{show.info.title.english}}"
     >
-    <a routerLink="/show/{{show.id}}" mat-line>{{show.title.english}}</a>
+    <a routerLink="/show/{{show.info.id}}" mat-line>{{show.info.title.english}}</a>
     <mat-icon>chevron_right</mat-icon>
   </mat-list-item>
 </mat-nav-list>

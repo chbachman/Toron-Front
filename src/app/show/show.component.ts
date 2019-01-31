@@ -13,6 +13,7 @@ import {Preference, ToronPreferencesService} from '../toron-preferences.service'
 export class ShowComponent implements OnInit {
   show: ShowInfo
   discussions: Discussion[]
+  rewatch: Discussion[]
 
   toolbarStyle = 'top'
 
@@ -43,13 +44,15 @@ export class ShowComponent implements OnInit {
 
   getShows(id: number) {
     this.backend.getShow(id).subscribe(show => {
-      console.log(show.showInfo.idMal)
-      this.show = show.showInfo
-      this.discussions = show.discussion
+      console.log(show)
+      console.log(show.info.idMal)
+      this.show = show.info
+      this.discussions = show.threads.filter(a => !a.rewatch).sort((a, b) => a.episode.start - b.episode.start)
+      this.rewatch = show.threads.filter(a => a.rewatch).sort((a, b) => a.episode.start - b.episode.start)
       this.data = {
-        labels: show.showInfo.stats.scoreDistribution.map(it => it.score),
+        labels: show.info.stats.scoreDistribution.map(it => it.score),
         datasets: [{
-          data: show.showInfo.stats.scoreDistribution.map(it => it.amount),
+          data: show.info.stats.scoreDistribution.map(it => it.amount),
           backgroundColor: '#FFFFFF22',
           borderColor: '#FFFFFF'
         }],
@@ -57,7 +60,7 @@ export class ShowComponent implements OnInit {
 
       this.preferences.get<string>(Preference.ApiType).subscribe(preference => {
         if (preference === 'MyAnimeList') {
-          this.backend.getMALShow(show.showInfo.idMal).subscribe(malShow => {
+          this.backend.getMALShow(show.info.idMal).subscribe(malShow => {
             this.show.description = malShow.synopsis
           })
         }
