@@ -44,8 +44,6 @@ export class ShowComponent implements OnInit {
 
   getShows(id: number) {
     this.backend.getShow(id).subscribe(show => {
-      console.log(show)
-      console.log(show.info.idMal)
       this.show = show.info
       this.discussions = show.threads.filter(a => !a.rewatch).sort((a, b) => a.episode.start - b.episode.start)
       this.rewatch = show.threads.filter(a => a.rewatch).sort((a, b) => a.episode.start - b.episode.start)
@@ -68,9 +66,8 @@ export class ShowComponent implements OnInit {
     })
   }
 
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    const scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
-    this.toolbarStyle = scroll < 100 ? 'top' : 'bottom'
+  switchTitle(inViewport: boolean) {
+    this.toolbarStyle = inViewport ? 'top' : 'bottom'
+    console.log(inViewport ? 'top' : 'bottom')
   }
 }

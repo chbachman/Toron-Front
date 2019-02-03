@@ -1,2 +1,16 @@
 $background-color: #222228;
 $text-color: #DDDDDD;
+$tablet: "only screen and (min-device-width: 480px)";
+$desktop: "only screen and (min-device-width: 961px)";
+
+$navbar-collapsed-height: 56px;
+$navbar-row-height: 40px;
+$navbar-row-count: 2;
+
+$body-bg: $background-color;
+$body-color: $text-color;
+
+$list-group-bg: $background-color;
+$list-group-border-color: lighten($background-color, 5%);
+$list-group-hover-bg: lighten($background-color, 10%);
+$list-group-action-color: $text-color;

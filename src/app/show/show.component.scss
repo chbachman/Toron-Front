@@ -1,4 +1,25 @@
-@import '~src/variables.scss';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~src/variables';
+
+#nav-list {
+  display: none;
+}
+
+@include media-breakpoint-up(lg) {
+  #nav-list {
+    display: inline-block;
+  }
+
+  .row {
+    .col-scroll {
+      height: calc(100vh - #{$navbar-collapsed-height});
+      overflow: hidden;
+      overflow-y: scroll;
+    }
+  }
+}
 
 .banner-container {
   overflow: hidden;
@@ -6,15 +27,44 @@
   img.banner {
     width: 100%;
     height: auto;
+    z-index: 0;
 
     transform: scale(1.5);
+
+    @media #{$tablet} { transform: scale(1.1) }
   }
 
-  height: 120px;
+  height: 25vw;
 }
 
 .container {
   margin: 10px;
+
+  img {
+    display: none;
+  }
+
+  @media #{$desktop} {
+    .title-container {
+      display: flex;
+      flex-direction: row;
+    }
+
+    img {
+      display: block;
+      border-radius: 3px;
+    }
+
+    .image-container {
+      margin: 10px;
+    }
+
+    .text-container {
+      flex-grow: 1;
+      flex-basis: 0;
+      flex-shrink: 1;
+    }
+  }
 
   mat-card {
     background-color: darken($background-color, 2)

@@ -1,41 +1,58 @@
-<mat-toolbar [ngClass]="toolbarStyle">
-  <button routerLink="/" mat-icon-button>
-    <mat-icon aria-label="Back">arrow_back</mat-icon>
-  </button>
-  <span *ngIf="show" [ngClass]="toolbarStyle"> {{show.title.english}} </span>
-</mat-toolbar>
+<div class="container-fluid px-0">
+  <div class="row no-gutters">
+    <div id="nav-list" class="col-scroll col-lg-4">
+      <app-nav-list></app-nav-list>
+    </div>
+    <div class="col-scroll col-lg-8">
+      <mat-toolbar [ngClass]="toolbarStyle">
+        <button routerLink="/" mat-icon-button>
+          <mat-icon aria-label="Back">arrow_back</mat-icon>
+        </button>
+        <span *ngIf="show" [ngClass]="toolbarStyle"> {{show.title.english}} </span>
+      </mat-toolbar>
 
-<div *ngIf="show" class="banner-container">
-  <img
-    class="banner"
-    src="{{show.bannerImage}}"
-  />
+      <div *ngIf="show" class="banner-container">
+        <img
+          class="banner"
+          src="{{show.bannerImage}}"
+        />
+      </div>
+
+      <div *ngIf="show" class="container">
+
+        <div class="title-container">
+          <div class="image-container">
+            <img src="{{show.coverImage.extraLarge}}"/>
+          </div>
+          <div class="text-container">
+            <h2 snInViewport (inViewportChange)="switchTitle($event)">{{show.title.english}}</h2>
+
+            <h5>Description</h5>
+            <mat-card>
+              <mat-card-content [innerHTML]="show.description"></mat-card-content>
+            </mat-card>
+
+            <mat-grid-list cols="4" rowHeight="3:1">
+              <mat-grid-tile *ngFor="let discussion of discussions">
+                <a href="{{discussion.url}}">
+                  Episode {{ discussion.episode.start }} - Season {{ discussion.season }}
+                </a>
+              </mat-grid-tile>
+            </mat-grid-list>
+          </div>
+        </div>
+
+
+
+
+        <mat-nav-list>
+          <a mat-list-item *ngFor="let discussion of rewatch" href="{{discussion.url}}">
+            Rewatch Episode {{ discussion.episode.start }} - Season {{ discussion.season }}
+          </a>
+        </mat-nav-list>
+      </div>
+
+    </div>
+  </div>
 </div>
 
-<div *ngIf="show" class="container">
-  <h2>{{show.title.english}}</h2>
-
-  <h5>Description</h5>
-  <mat-card>
-    <mat-card-content [innerHTML]="show.description"></mat-card-content>
-  </mat-card>
-
-  <h5>Scores</h5>
-  <mat-card>
-    <mat-card-content>
-      <chart [type]="type" [data]="data" [options]="options"></chart>
-    </mat-card-content>
-  </mat-card>
-
-  <mat-nav-list>
-    <a mat-list-item *ngFor="let discussion of discussions" href="{{discussion.url}}">
-      Episode {{ discussion.episode.start }} - Season {{ discussion.season }}
-    </a>
-  </mat-nav-list>
-
-  <mat-nav-list>
-    <a mat-list-item *ngFor="let discussion of rewatch" href="{{discussion.url}}">
-      Rewatch Episode {{ discussion.episode.start }} - Season {{ discussion.season }}
-    </a>
-  </mat-nav-list>
-</div>

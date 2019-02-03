@@ -11,4 +11,15 @@ import { trigger, style, animate, transition } from '@angular/animations'
 
 export class AppComponent {
   constructor() {}
+
+  navbarCollapsed = true
+
+  collapseNavbar() {
+    this.navbarCollapsed = true
+    console.log('Collapse')
+  }
+
+  toggleNavbar() {
+    this.navbarCollapsed = !this.navbarCollapsed
+  }
 }

@@ -5,6 +5,12 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
 import { ChartModule } from 'angular2-chartjs'
 import { FormsModule } from '@angular/forms'
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faChevronRight, faBars } from '@fortawesome/free-solid-svg-icons'
+
 import { MatListModule } from '@angular/material/list'
 import { MatMenuModule } from '@angular/material/menu'
 import { MatIconModule } from '@angular/material/icon'
@@ -27,18 +33,24 @@ import { SettingsComponent } from './settings/settings.component'
 import { ServiceWorkerModule } from '@angular/service-worker'
 import { environment } from '../environments/environment'
 
+import { InViewportModule } from '@thisissoon/angular-inviewport';
+import { NavListComponent } from './nav-list/nav-list.component'
+
 @NgModule({
   declarations: [
     AppComponent,
     ShowComponent,
     ListComponent,
-    SettingsComponent
+    SettingsComponent,
+    NavListComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FontAwesomeModule,
+    NgbModule,
     FormsModule,
     MatIconModule,
     MatListModule,
@@ -52,6 +64,7 @@ import { environment } from '../environments/environment'
     MatInputModule,
     MatRadioModule,
     ChartModule,
+    InViewportModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
@@ -60,4 +73,9 @@ import { environment } from '../environments/environment'
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    library.add(faChevronRight)
+    library.add(faBars)
+  }
+}

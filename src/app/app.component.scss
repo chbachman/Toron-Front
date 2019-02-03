@@ -1,3 +1,22 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~src/variables.scss';
+
+#navbar-buffer.collapsed {
+  margin-bottom: $navbar-collapsed-height;
+}
+
+#navbar-buffer.expanded {
+  margin-bottom: $navbar-collapsed-height + $navbar-row-height * $navbar-row-count;
+}
+
+@include media-breakpoint-up(lg) {
+  #navbar-buffer.collapsed, #navbar-buffer.expanded {
+    margin-bottom: $navbar-collapsed-height;
+  }
+}
+
 
 
 

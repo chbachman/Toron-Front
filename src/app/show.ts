@@ -8,6 +8,7 @@ export class ShowStats {
 }
 
 export class CoverImage {
+  extraLarge: string
   medium: string
   large: string
 }

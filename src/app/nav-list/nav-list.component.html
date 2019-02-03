@@ -1,0 +1,16 @@
+<div class="list-group">
+  <a class="list-group-item list-group-item-action" *ngFor="let show of shows" routerLink="/show/{{show.info.id}}">
+    <div class="d-flex">
+      <div class="cover" [style.background-image]="'url(' + show.info.coverImage.medium + ')'"></div>
+
+      <div class="flex-grow-1 text-container">
+        <p class="mb-1">{{show.info.title.english}}</p>
+        <small>{{show.threads.length}} Episodes</small>
+      </div>
+
+      <div class="chevron">
+        <fa-icon icon="chevron-right"></fa-icon>
+      </div>
+    </div>
+  </a>
+</div>
