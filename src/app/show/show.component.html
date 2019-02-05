@@ -1,5 +1,6 @@
 <app-nav-bar [clear]="toolbarStyle" [padding]="false">
-  <span id="navbar-title" class="text-truncate" [ngClass]="toolbarStyle ? 'clear' : ''" *ngIf="show">{{show.title.english}}</span>
+  <a class="btn btn-outline-primary btn-sm mr-2" href="#" role="button"> <fa-icon icon="arrow-left"></fa-icon> </a>
+  <span id="navbar-title" class="text-truncate" *ngIf="show">{{show.title.english}}</span>
 </app-nav-bar>
 
 <div class="container-fluid px-0">

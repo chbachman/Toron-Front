@@ -7,12 +7,11 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/Toron-Front/favicon.ico",
         "/Toron-Front/index.html",
-        "/Toron-Front/main.d527a47c080dba2e9465.js",
+        "/Toron-Front/main.0ccc466bfeb403aaa45e.js",
         "/Toron-Front/polyfills.b79c9d41d08722089ce4.js",
         "/Toron-Front/runtime.b57bf819d5bdce77f1c7.js",
-        "/Toron-Front/styles.ae224ac21ff4b4674f6c.css"
+        "/Toron-Front/styles.5da847d7f20a9e7dfced.css"
       ],
       "patterns": []
     },
@@ -21,6 +20,15 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "urls": [
+        "/Toron-Front/assets/Icon-square.svg",
+        "/Toron-Front/assets/Icon.svg",
+        "/Toron-Front/assets/android-chrome-192x192.png",
+        "/Toron-Front/assets/android-chrome-512x512.png",
+        "/Toron-Front/assets/apple-touch-icon.png",
+        "/Toron-Front/assets/browserconfig.xml",
+        "/Toron-Front/assets/favicon-16x16.png",
+        "/Toron-Front/assets/favicon-32x32.png",
+        "/Toron-Front/assets/favicon.ico",
         "/Toron-Front/assets/icons/icon-128x128.png",
         "/Toron-Front/assets/icons/icon-144x144.png",
         "/Toron-Front/assets/icons/icon-152x152.png",
@@ -28,27 +36,49 @@
         "/Toron-Front/assets/icons/icon-384x384.png",
         "/Toron-Front/assets/icons/icon-512x512.png",
         "/Toron-Front/assets/icons/icon-72x72.png",
-        "/Toron-Front/assets/icons/icon-96x96.png"
+        "/Toron-Front/assets/icons/icon-96x96.png",
+        "/Toron-Front/assets/mstile-144x144.png",
+        "/Toron-Front/assets/mstile-150x150.png",
+        "/Toron-Front/assets/mstile-310x150.png",
+        "/Toron-Front/assets/mstile-310x310.png",
+        "/Toron-Front/assets/mstile-70x70.png",
+        "/Toron-Front/assets/safari-pinned-tab.svg",
+        "/Toron-Front/assets/site.webmanifest"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "/Toron-Front/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/Toron-Front/assets/Icon-square.svg": "099885866fc9434356398ffc133f453164a639e8",
+    "/Toron-Front/assets/Icon.svg": "224ae652e32fd260a188d8ef713d376485c8226a",
+    "/Toron-Front/assets/android-chrome-192x192.png": "b5626b7e422bbd5cd599780216a56c57e71efbe6",
+    "/Toron-Front/assets/android-chrome-512x512.png": "71742f38df12ae11cd98b3b0b982ed0765db37de",
+    "/Toron-Front/assets/apple-touch-icon.png": "404be4bb6b3f96a5fa7afc11c362c324778a4ca4",
+    "/Toron-Front/assets/browserconfig.xml": "a308fac7c2637f1dcb86dace167168661cd2c64c",
+    "/Toron-Front/assets/favicon-16x16.png": "41dbe45c821e697cebdfb45374c5c784b3ca6e8b",
+    "/Toron-Front/assets/favicon-32x32.png": "3329cefb7a3316db2906c6bda4ef652af163eb19",
+    "/Toron-Front/assets/favicon.ico": "e67054001f21e67bfd65c9598ff5f8dc609c4eba",
+    "/Toron-Front/assets/icons/icon-128x128.png": "1ffa9a8e3a9d1524d18701a101cc7c5d1f8c6dfe",
     "/Toron-Front/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
     "/Toron-Front/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
     "/Toron-Front/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
     "/Toron-Front/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
     "/Toron-Front/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
-    "/Toron-Front/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
-    "/Toron-Front/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
-    "/Toron-Front/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "/Toron-Front/index.html": "02c71cf5d3f5b60f1e86cab25782af03ac1ce200",
-    "/Toron-Front/main.d527a47c080dba2e9465.js": "a012ed19a932fd7378228834797f3b09d85b47a1",
+    "/Toron-Front/assets/icons/icon-72x72.png": "10647158e6fd26e728b0a3e7abe7f06ef5a92000",
+    "/Toron-Front/assets/icons/icon-96x96.png": "9eb9f55ea402b55ddb1a13e9d41db63669502304",
+    "/Toron-Front/assets/mstile-144x144.png": "37b5e4f84186e1ab74e3a2b8ec17b3a8976e9152",
+    "/Toron-Front/assets/mstile-150x150.png": "cd1faa68acdeebb48ac5b4e699ceaacdb7c5dcfa",
+    "/Toron-Front/assets/mstile-310x150.png": "c76a147a9d816bc6d934eef61161754bb58541d0",
+    "/Toron-Front/assets/mstile-310x310.png": "f7a034121b8d435875bd45e553d3a9c3f87f802d",
+    "/Toron-Front/assets/mstile-70x70.png": "a6bf883c85317762be44200b8e7b7db068044743",
+    "/Toron-Front/assets/safari-pinned-tab.svg": "ed44e733701274e7d6d90bd26d70be956fdc500b",
+    "/Toron-Front/assets/site.webmanifest": "b30e95df2ac9c058fb29a0da4000c0871d8807ad",
+    "/Toron-Front/index.html": "a682092ecad2baee6b96d6897faa6d7b2b694808",
+    "/Toron-Front/main.0ccc466bfeb403aaa45e.js": "2b8541b91feda63703c76dcea88b2968a98292ec",
     "/Toron-Front/polyfills.b79c9d41d08722089ce4.js": "6946e10a03311677a01490b8e91741668e64e17e",
     "/Toron-Front/runtime.b57bf819d5bdce77f1c7.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
-    "/Toron-Front/styles.ae224ac21ff4b4674f6c.css": "32f2116beb0c13662b4749ce78d9ed8f5adb753b"
+    "/Toron-Front/styles.5da847d7f20a9e7dfced.css": "46eaa31055ec8f897b9534e3badb48720060bb10"
   },
   "navigationUrls": [
     {

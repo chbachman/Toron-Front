@@ -1,34 +1,6 @@
 <div class="container" [ngClass]="clear ? 'clear' : ''">
   <header class="navbar navbar-dark fixed-top navbar-expand-lg" [ngClass]="navbarCollapsed ? 'flex-nowrap' : ''">
-
-    <a class="navbar-brand" [routerLink]="['/']" (click)="collapseNavbar()">
-      <img width="25" height="25" src="assets/Icon.svg" alt="Toron"/>
-    </a>
-
     <ng-content></ng-content>
-
-    <button
-      class="navbar-toggler navbar-toggler-right"
-      type="button"
-      (click)="toggleNavbar()"
-      [attr.aria-expanded]="!navbarCollapsed"
-      aria-controls="navbarContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <fa-icon icon="bars"></fa-icon>
-    </button>
-
-    <div class="navbar-collapse" [ngbCollapse]="navbarCollapsed" id="navbarContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item" [routerLinkActive]="['active']">
-          <a class="nav-link" [routerLink]="['/settings']" (click)="collapseNavbar()">Getting Started</a>
-        </li>
-        <li class="nav-item" [routerLinkActive]="['active']">
-          <a class="nav-link" [routerLink]="['/components']" (click)="collapseNavbar()">Components</a>
-        </li>
-      </ul>
-    </div>
   </header>
 
   <div *ngIf="padding" id="navbar-buffer" [ngClass]="navbarCollapsed ? 'collapsed' : 'expanded'"></div>
