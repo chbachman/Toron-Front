@@ -19,7 +19,7 @@ export class ToronBackendService {
   private createCache<T>(key: string, produce: () => Observable<T>): Observable<T> {
     return from(this.cache.getCached<T>(key))
       .pipe(
-        map(value => value.data),
+        map(value => value.expired ? null : value.data),
         concatMap(value => {
           if (value == null) {
             console.log(`Cache Failed for ${key}`)
