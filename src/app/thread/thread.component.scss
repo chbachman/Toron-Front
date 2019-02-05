@@ -1,0 +1,22 @@
+.thread-container {
+  display: flex;
+  align-items: center;
+
+  h4 {
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  div {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  fa-icon {
+    padding: 5px 5px 5px 0;
+  }
+}

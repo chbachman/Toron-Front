@@ -15,7 +15,7 @@ export class ShowComponent implements OnInit {
   discussions: Discussion[]
   rewatch: Discussion[]
 
-  toolbarStyle = 'top'
+  toolbarStyle = false
 
   type = 'line'
   data: any = {
@@ -67,7 +67,6 @@ export class ShowComponent implements OnInit {
   }
 
   switchTitle(inViewport: boolean) {
-    this.toolbarStyle = inViewport ? 'top' : 'bottom'
-    console.log(inViewport ? 'top' : 'bottom')
+    this.toolbarStyle = inViewport
   }
 }

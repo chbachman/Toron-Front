@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core'
+import {Component, ElementRef, OnInit, ViewChild, Input} from '@angular/core'
 import {Show} from '../show'
 import {ToronBackendService} from '../toron-backend.service'
 import {animate, style, transition, trigger} from '@angular/animations'

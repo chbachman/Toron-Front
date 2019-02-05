@@ -10,18 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faChevronRight, faBars } from '@fortawesome/free-solid-svg-icons'
-
-import { MatListModule } from '@angular/material/list'
-import { MatMenuModule } from '@angular/material/menu'
-import { MatIconModule } from '@angular/material/icon'
-import { MatCardModule } from '@angular/material/card'
-import { MatButtonModule } from '@angular/material/button'
-import { MatToolbarModule } from '@angular/material/toolbar'
-import { MatGridListModule } from '@angular/material/grid-list'
-import { MatSidenavModule } from '@angular/material/sidenav'
-import { MatInputModule } from '@angular/material/input'
-import { MatCheckboxModule } from '@angular/material/checkbox'
-import { MatRadioModule } from '@angular/material/radio'
+import { faUser, faComment, faArrowAltCircleUp } from '@fortawesome/free-regular-svg-icons'
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
@@ -29,20 +18,22 @@ import { ShowComponent } from './show/show.component'
 import { ListComponent } from './list/list.component'
 import { CachingInterceptor } from './caching-interceptor'
 import { RequestCache } from './request-cache.service'
-import { SettingsComponent } from './settings/settings.component'
 import { ServiceWorkerModule } from '@angular/service-worker'
 import { environment } from '../environments/environment'
 
-import { InViewportModule } from '@thisissoon/angular-inviewport';
+import { InViewportModule } from '@thisissoon/angular-inviewport'
 import { NavListComponent } from './nav-list/nav-list.component'
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { ThreadComponent } from './thread/thread.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     ShowComponent,
     ListComponent,
-    SettingsComponent,
-    NavListComponent
+    NavListComponent,
+    NavBarComponent,
+    ThreadComponent
   ],
   imports: [
     BrowserModule,
@@ -52,17 +43,6 @@ import { NavListComponent } from './nav-list/nav-list.component'
     FontAwesomeModule,
     NgbModule,
     FormsModule,
-    MatIconModule,
-    MatListModule,
-    MatMenuModule,
-    MatToolbarModule,
-    MatCardModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatGridListModule,
-    MatCheckboxModule,
-    MatInputModule,
-    MatRadioModule,
     ChartModule,
     InViewportModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
@@ -75,7 +55,12 @@ import { NavListComponent } from './nav-list/nav-list.component'
 })
 export class AppModule {
   constructor() {
-    library.add(faChevronRight)
-    library.add(faBars)
+    library.add(
+      faChevronRight,
+      faBars,
+      faUser,
+      faArrowAltCircleUp,
+      faComment
+    )
   }
 }

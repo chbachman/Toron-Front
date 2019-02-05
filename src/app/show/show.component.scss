@@ -3,6 +3,7 @@
 @import '~bootstrap/scss/mixins';
 @import '~src/variables';
 
+// Handle NavList
 #nav-list {
   display: none;
 }
@@ -10,6 +11,11 @@
 @include media-breakpoint-up(lg) {
   #nav-list {
     display: inline-block;
+    margin-top: $navbar-collapsed-height;
+  }
+
+  #show-detail {
+    height: 100vh;
   }
 
   .row {
@@ -21,78 +27,28 @@
   }
 }
 
-.banner-container {
-  overflow: hidden;
+// Handle NavBar
+#navbar-title {
+  transition: color 0.5s;
 
-  img.banner {
-    width: 100%;
-    height: auto;
-    z-index: 0;
-
-    transform: scale(1.5);
-
-    @media #{$tablet} { transform: scale(1.1) }
-  }
-
-  height: 25vw;
-}
-
-.container {
-  margin: 10px;
-
-  img {
-    display: none;
-  }
-
-  @media #{$desktop} {
-    .title-container {
-      display: flex;
-      flex-direction: row;
-    }
-
-    img {
-      display: block;
-      border-radius: 3px;
-    }
-
-    .image-container {
-      margin: 10px;
-    }
-
-    .text-container {
-      flex-grow: 1;
-      flex-basis: 0;
-      flex-shrink: 1;
-    }
-  }
-
-  mat-card {
-    background-color: darken($background-color, 2)
-  }
-}
-
-mat-toolbar {
-  background-color: transparent;
-  color: transparent;
-  position: fixed;
-  z-index: 1;
-  transition: all 0.5s;
-
-  &.bottom {
-    background-color: $background-color;
-    color: $text-color;
-  }
-
-  button {
-    background-color: rgba($background-color, .7);
-  }
-
-  span {
+  &.clear {
     color: transparent;
-    transition: all 0.5s;
-
-    &.bottom {
-      color: $text-color;
-    }
   }
 }
+
+@include media-breakpoint-up(lg) {
+  #navbar-title {
+    order: 2;
+    margin-right: 1rem;
+  }
+}
+
+// Handle Banner
+#banner {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20vh;
+}
+
+// Handle Thread Items

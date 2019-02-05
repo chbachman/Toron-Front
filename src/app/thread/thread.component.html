@@ -1,0 +1,17 @@
+<a
+  class="list-group-item list-group-item-action"
+  href="{{thread.url}}"
+>
+  <div class="thread-container">
+    <h4>{{thread.episode.start}}</h4>
+    <div>
+      <p><fa-icon [icon]="['far', 'arrow-alt-circle-up']"></fa-icon> {{thread.score}} </p>
+      <p><fa-icon [icon]="['far', 'comment']"></fa-icon> {{thread.numComments}}</p>
+    </div>
+    <div>
+      <p> Episode {{thread.episode.start}} Discussion </p>
+      <fa-icon [icon]="['far','user']"></fa-icon> <small>{{thread.author}}</small>
+    </div>
+    <fa-icon class="ml-auto" icon="chevron-right"></fa-icon>
+  </div>
+</a>

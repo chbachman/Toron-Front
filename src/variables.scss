@@ -1,4 +1,6 @@
-$background-color: #222228;
+$background-color: #191B1F;
+$highlight-color: #13F763;
+$secondary-color: #335C42;
 $text-color: #DDDDDD;
 $tablet: "only screen and (min-device-width: 480px)";
 $desktop: "only screen and (min-device-width: 961px)";
@@ -7,10 +9,15 @@ $navbar-collapsed-height: 56px;
 $navbar-row-height: 40px;
 $navbar-row-count: 2;
 
+$navbar-dark-color: $highlight-color;
+$navbar-dark-toggler-border-color: $highlight-color;
+
 $body-bg: $background-color;
 $body-color: $text-color;
 
 $list-group-bg: $background-color;
 $list-group-border-color: lighten($background-color, 5%);
-$list-group-hover-bg: lighten($background-color, 10%);
+$list-group-hover-bg: $secondary-color;
 $list-group-action-color: $text-color;
+
+$card-bg: darken($background-color, 5%);
