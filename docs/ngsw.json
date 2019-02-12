@@ -8,10 +8,10 @@
       "updateMode": "prefetch",
       "urls": [
         "/Toron-Front/index.html",
-        "/Toron-Front/main.1f92319eb4d7e5149d6c.js",
+        "/Toron-Front/main.9d12b2d00793138f1256.js",
         "/Toron-Front/polyfills.b79c9d41d08722089ce4.js",
         "/Toron-Front/runtime.b57bf819d5bdce77f1c7.js",
-        "/Toron-Front/styles.5da847d7f20a9e7dfced.css"
+        "/Toron-Front/styles.d9520761d962342f9680.css"
       ],
       "patterns": []
     },
@@ -74,11 +74,11 @@
     "/Toron-Front/assets/mstile-70x70.png": "a6bf883c85317762be44200b8e7b7db068044743",
     "/Toron-Front/assets/safari-pinned-tab.svg": "ed44e733701274e7d6d90bd26d70be956fdc500b",
     "/Toron-Front/assets/site.webmanifest": "b30e95df2ac9c058fb29a0da4000c0871d8807ad",
-    "/Toron-Front/index.html": "d61cefb2f2076385f48d3083f1d35a3d5f61d4bd",
-    "/Toron-Front/main.1f92319eb4d7e5149d6c.js": "efd9fb2d4412ca0d740ab03b3a966ca66ceede1b",
+    "/Toron-Front/index.html": "2d796058c4b88db273a7e2b32be09663fa54314c",
+    "/Toron-Front/main.9d12b2d00793138f1256.js": "683018a383f8c3c06f6a567ef0585a76520cb438",
     "/Toron-Front/polyfills.b79c9d41d08722089ce4.js": "6946e10a03311677a01490b8e91741668e64e17e",
     "/Toron-Front/runtime.b57bf819d5bdce77f1c7.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
-    "/Toron-Front/styles.5da847d7f20a9e7dfced.css": "46eaa31055ec8f897b9534e3badb48720060bb10"
+    "/Toron-Front/styles.d9520761d962342f9680.css": "f549c231be5b5a77bc372ce77f1078af0e757d31"
   },
   "navigationUrls": [
     {
