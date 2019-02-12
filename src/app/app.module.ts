@@ -9,7 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faChevronRight, faBars, faArrowLeft, faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faChevronRight, faCog, faArrowLeft, faSearch } from '@fortawesome/free-solid-svg-icons'
 import { faUser, faComment, faArrowAltCircleUp } from '@fortawesome/free-regular-svg-icons'
 
 import { AppRoutingModule } from './app-routing.module'
@@ -55,7 +55,7 @@ export class AppModule {
   constructor() {
     library.add(
       faChevronRight,
-      faBars,
+      faCog,
       faUser,
       faArrowAltCircleUp,
       faComment,

@@ -1,20 +1,14 @@
 <div class="container">
   <header class="navbar navbar-dark fixed-top">
     <a class="btn btn-outline-primary" routerLink="/">
-      <fa-icon icon="arrow-left"></fa-icon>
+      <fa-icon icon="arrow-left" size="lg"></fa-icon>
     </a>
 
     <ng-content></ng-content>
 
-    <button
-      class="btn btn-outline-primary ml-auto"
-      type="button"
-      aria-controls="navbarContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <fa-icon icon="bars"></fa-icon>
-    </button>
+    <a class="btn btn-outline-primary ml-auto">
+      <fa-icon icon="cog" size="lg"></fa-icon>
+    </a>
   </header>
 
   <div id="navbar-buffer"></div>
