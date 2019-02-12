@@ -17,28 +17,19 @@ export class ShowComponent implements OnInit {
 
   toolbarStyle = false
 
-  type = 'line'
-  data: any = {
-    labels: ['10', '20', '30', '40', '50', '60', '70', '80', '90', '100'],
-    datasets: [
-      {
-        data: [65, 59, 80, 81, 56, 55, 40]
-      }
-    ]
-  }
-  options = {
-    responsive: true,
-    maintainAspectRatio: false,
-    legend: {
-      display: false
-    }
-  }
+  rootPath = false
 
   constructor(private route: ActivatedRoute, private backend: ToronBackendService, private preferences: ToronPreferencesService) { }
 
   ngOnInit() {
+    this.route.url.subscribe(route => {
+      this.rootPath = route.length === 0
+    })
+
     this.route.paramMap.subscribe(map => {
-      this.getShows(parseInt(map.get('id'), 10))
+      if (map.get('id') != null) {
+        this.getShows(parseInt(map.get('id'), 10))
+      }
     })
   }
 
@@ -47,14 +38,6 @@ export class ShowComponent implements OnInit {
       this.show = show.info
       this.discussions = show.threads.filter(a => !a.rewatch).sort((a, b) => a.episode.start - b.episode.start)
       this.rewatch = show.threads.filter(a => a.rewatch).sort((a, b) => a.episode.start - b.episode.start)
-      this.data = {
-        labels: show.info.stats.scoreDistribution.map(it => it.score),
-        datasets: [{
-          data: show.info.stats.scoreDistribution.map(it => it.amount),
-          backgroundColor: '#FFFFFF22',
-          borderColor: '#FFFFFF'
-        }],
-      }
 
       this.preferences.get<string>(Preference.ApiType).subscribe(preference => {
         if (preference === 'MyAnimeList') {

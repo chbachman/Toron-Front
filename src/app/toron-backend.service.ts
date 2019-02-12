@@ -52,4 +52,10 @@ export class ToronBackendService {
       () => this.http.get<MALShow>(`${this.malUrl}/${id}`)
     )
   }
+
+  getSearch(search: string): Observable<Show[]> {
+    return this.createCache(`search-${search}`,
+      () => this.http.get<Show[]>(`${this.baseUrl}/search?q=${search}`)
+    )
+  }
 }

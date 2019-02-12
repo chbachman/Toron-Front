@@ -24,9 +24,9 @@ export class NavListComponent implements OnInit {
 
   shows: Show[]
   title = 'Toron'
-  searchEnabled = false
+  search: string
 
-  @ViewChild('search') searchBar: ElementRef
+  @Input() active: number
 
   ngOnInit() {
     this.getShows()
@@ -38,11 +38,17 @@ export class NavListComponent implements OnInit {
     })
   }
 
-  toggleSearch() {
-    this.searchEnabled = !this.searchEnabled
-    if (this.searchEnabled) {
-      setTimeout(() => this.searchBar.nativeElement.focus(), 0)
+  updateSearch() {
+    if (this.search == null || this.search.length === 0) {
+      this.getShows()
+      return
     }
+
+    console.log('Updating Search')
+
+    this.backend.getSearch(this.search).subscribe(shows => {
+      this.shows = shows
+    })
   }
 
 }

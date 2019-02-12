@@ -9,7 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faChevronRight, faBars, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import { faChevronRight, faBars, faArrowLeft, faSearch } from '@fortawesome/free-solid-svg-icons'
 import { faUser, faComment, faArrowAltCircleUp } from '@fortawesome/free-regular-svg-icons'
 
 import { AppRoutingModule } from './app-routing.module'
@@ -23,7 +23,6 @@ import { environment } from '../environments/environment'
 
 import { InViewportModule } from '@thisissoon/angular-inviewport'
 import { NavListComponent } from './nav-list/nav-list.component'
-import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ThreadComponent } from './thread/thread.component'
 
 @NgModule({
@@ -32,7 +31,6 @@ import { ThreadComponent } from './thread/thread.component'
     ShowComponent,
     ListComponent,
     NavListComponent,
-    NavBarComponent,
     ThreadComponent
   ],
   imports: [
@@ -61,7 +59,8 @@ export class AppModule {
       faUser,
       faArrowAltCircleUp,
       faComment,
-      faArrowLeft
+      faArrowLeft,
+      faSearch
     )
   }
 }

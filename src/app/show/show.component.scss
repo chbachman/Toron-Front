@@ -6,16 +6,20 @@
 // Handle NavList
 #nav-list {
   display: none;
+
+  // If we are in the root path on a phone, we need the list to show up.
+  &.root-path {
+    display: inline-block;
+  }
 }
 
 @include media-breakpoint-up(lg) {
   #nav-list {
     display: inline-block;
-    margin-top: $navbar-collapsed-height;
   }
 
   #show-detail {
-    height: 100vh;
+    height: calc(100vh - #{$navbar-collapsed-height});
   }
 
   .row {

@@ -1,12 +1,7 @@
-<app-nav-bar [clear]="toolbarStyle" [padding]="false">
-  <a class="btn btn-outline-primary btn-sm mr-2" href="#" role="button"> <fa-icon icon="arrow-left"></fa-icon> </a>
-  <span id="navbar-title" class="text-truncate" *ngIf="show">{{show.title.english}}</span>
-</app-nav-bar>
-
 <div class="container-fluid px-0">
   <div class="row no-gutters">
-    <div id="nav-list" class="col-scroll col-lg-4">
-      <app-nav-list></app-nav-list>
+    <div id="nav-list" class="col-scroll col-lg-4" [ngClass]="rootPath ? 'root-path' : ''">
+      <app-nav-list [active]="show?.id"></app-nav-list>
     </div>
     <div id="show-detail" class="col-scroll col-lg-8">
 
@@ -27,7 +22,7 @@
               <img class="img-fluid" alt="{{show.title.english}} Cover Image" src="{{show.coverImage.extraLarge}}"/>
             </div>
             <div class="col-md-8">
-              <h2 snInViewport (inViewportChange)="switchTitle($event)">{{show.title.english}}</h2>
+              <h2>{{show.title.english}}</h2>
 
               <div class="card">
                 <div class="card-body" [innerHTML]="show.description"></div>

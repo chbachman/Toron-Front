@@ -1,9 +1,0 @@
-<div class="container" [ngClass]="clear ? 'clear' : ''">
-  <header class="navbar navbar-dark fixed-top navbar-expand-lg" [ngClass]="navbarCollapsed ? 'flex-nowrap' : ''">
-    <ng-content></ng-content>
-  </header>
-
-  <div *ngIf="padding" id="navbar-buffer" [ngClass]="navbarCollapsed ? 'collapsed' : 'expanded'"></div>
-</div>
-
-

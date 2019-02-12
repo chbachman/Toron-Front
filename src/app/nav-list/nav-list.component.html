@@ -1,5 +1,20 @@
 <div class="list-group">
-  <a class="list-group-item list-group-item-action" *ngFor="let show of shows" routerLink="/show/{{show.info.id}}">
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <fa-icon icon="search" class="input-group-text" id="search-icon">@</fa-icon>
+    </div>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Search"
+      aria-label="Search"
+      aria-describedby="search-icon"
+      [(ngModel)]="search"
+      (blur)="updateSearch()"
+      (keyup.enter)="updateSearch()"
+    >
+  </div>
+  <a class="list-group-item list-group-item-action" *ngFor="let show of shows" [ngClass]="active == show?.info.id ? 'active' : ''" routerLink="/show/{{show.info.id}}">
     <div class="d-flex">
       <div class="cover" [style.background-image]="'url(' + show.info.coverImage.medium + ')'"></div>
 

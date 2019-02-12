@@ -2,8 +2,6 @@ $background-color: #191B1F;
 $highlight-color: #13F763;
 $secondary-color: #335C42;
 $text-color: #DDDDDD;
-$tablet: "only screen and (min-device-width: 480px)";
-$desktop: "only screen and (min-device-width: 961px)";
 
 $primary: $highlight-color;
 
@@ -21,5 +19,14 @@ $list-group-bg: $background-color;
 $list-group-border-color: lighten($background-color, 5%);
 $list-group-hover-bg: $secondary-color;
 $list-group-action-color: $text-color;
+$list-group-active-bg: $secondary-color;
 
 $card-bg: darken($background-color, 5%);
+
+$input-bg: $background-color;
+$input-border-color: lighten($background-color, 5%);
+$input-box-shadow: none;
+$input-focus-box-shadow: none;
+$input-placeholder-color: darken($text-color, 40%);
+$input-color: $text-color;
+$input-group-addon-bg: $background-color;
