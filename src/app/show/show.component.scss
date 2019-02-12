@@ -31,22 +31,6 @@
   }
 }
 
-// Handle NavBar
-#navbar-title {
-  transition: color 0.5s;
-
-  &.clear {
-    color: transparent;
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  #navbar-title {
-    order: 2;
-    margin-right: 1rem;
-  }
-}
-
 // Handle Banner
 #banner {
   background-position: 50%;
@@ -54,5 +38,3 @@
   background-size: cover;
   height: 20vh;
 }
-
-// Handle Thread Items

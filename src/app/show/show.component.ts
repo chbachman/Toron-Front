@@ -3,6 +3,7 @@ import {Discussion, ShowInfo} from '../show'
 import {ActivatedRoute} from '@angular/router'
 import {ToronBackendService} from '../toron-backend.service'
 import {Preference, ToronPreferencesService} from '../toron-preferences.service'
+import {Title} from '@angular/platform-browser'
 
 @Component({
   selector: 'app-show',
@@ -19,7 +20,12 @@ export class ShowComponent implements OnInit {
 
   rootPath = false
 
-  constructor(private route: ActivatedRoute, private backend: ToronBackendService, private preferences: ToronPreferencesService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private backend: ToronBackendService,
+    private preferences: ToronPreferencesService,
+    private title: Title
+  ) { }
 
   ngOnInit() {
     this.route.url.subscribe(route => {

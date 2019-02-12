@@ -1,0 +1,21 @@
+<div class="container">
+  <header class="navbar navbar-dark fixed-top">
+    <a class="btn btn-outline-primary" routerLink="/">
+      <fa-icon icon="arrow-left"></fa-icon>
+    </a>
+
+    <ng-content></ng-content>
+
+    <button
+      class="btn btn-outline-primary ml-auto"
+      type="button"
+      aria-controls="navbarContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <fa-icon icon="bars"></fa-icon>
+    </button>
+  </header>
+
+  <div id="navbar-buffer"></div>
+</div>
