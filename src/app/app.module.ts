@@ -23,15 +23,20 @@ import { environment } from '../environments/environment'
 import { InViewportModule } from '@thisissoon/angular-inviewport'
 import { NavListComponent } from './nav-list/nav-list.component'
 import { ThreadComponent } from './thread/thread.component';
-import { NavbarComponent } from './navbar/navbar.component'
+import { NavbarComponent } from './navbar/navbar.component';
+import { SettingsPageComponent } from './settings-page/settings-page.component'
 
 @NgModule({
+  entryComponents: [
+    SettingsPageComponent
+  ],
   declarations: [
     AppComponent,
     ShowComponent,
     NavListComponent,
     ThreadComponent,
-    NavbarComponent
+    NavbarComponent,
+    SettingsPageComponent
   ],
   imports: [
     BrowserModule,

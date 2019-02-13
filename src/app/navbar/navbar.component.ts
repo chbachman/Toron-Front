@@ -1,4 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core'
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap'
+import {SettingsPageComponent} from '../settings-page/settings-page.component'
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +9,13 @@ import {Component, Input, OnInit} from '@angular/core'
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit() {
+  }
+
+  open() {
+    const modalRef = this.modalService.open(SettingsPageComponent, { size: 'lg' })
   }
 
 }

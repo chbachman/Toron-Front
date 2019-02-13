@@ -1,9 +1,9 @@
-import {Component, HostListener, OnInit} from '@angular/core'
+import {Component, OnInit} from '@angular/core'
 import {Discussion, ShowInfo} from '../show'
 import {ActivatedRoute} from '@angular/router'
 import {ToronBackendService} from '../toron-backend.service'
-import {Preference, ToronPreferencesService} from '../toron-preferences.service'
-import {Title} from '@angular/platform-browser'
+import {SettingsService} from '../settings.service'
+import {Setting} from '../settings'
 
 @Component({
   selector: 'app-show',
@@ -16,15 +16,12 @@ export class ShowComponent implements OnInit {
   discussions: Discussion[]
   rewatch: Discussion[]
 
-  toolbarStyle = false
-
   rootPath = false
 
   constructor(
     private route: ActivatedRoute,
     private backend: ToronBackendService,
-    private preferences: ToronPreferencesService,
-    private title: Title
+    private settings: SettingsService
   ) { }
 
   ngOnInit() {
@@ -37,6 +34,8 @@ export class ShowComponent implements OnInit {
         this.getShows(parseInt(map.get('id'), 10))
       }
     })
+
+    this.settings.get<string>(Setting.RedditApp).subscribe(value => console.log(value))
   }
 
   getShows(id: number) {
@@ -45,7 +44,7 @@ export class ShowComponent implements OnInit {
       this.discussions = show.threads.filter(a => !a.rewatch).sort((a, b) => a.episode.start - b.episode.start)
       this.rewatch = show.threads.filter(a => a.rewatch).sort((a, b) => a.episode.start - b.episode.start)
 
-      this.preferences.get<string>(Preference.ApiType).subscribe(preference => {
+      this.settings.get<string>(Setting.ApiType).subscribe(preference => {
         if (preference === 'MyAnimeList') {
           this.backend.getMALShow(show.info.idMal).subscribe(malShow => {
             this.show.description = malShow.synopsis
@@ -53,9 +52,5 @@ export class ShowComponent implements OnInit {
         }
       })
     })
-  }
-
-  switchTitle(inViewport: boolean) {
-    this.toolbarStyle = inViewport
   }
 }

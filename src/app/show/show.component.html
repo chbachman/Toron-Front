@@ -1,4 +1,4 @@
-<app-navbar> <span class="ml-auto"> {{show?.title.english}} </span> </app-navbar>
+<app-navbar> <span id="title" class="text-truncate"> {{show?.title.english}} </span> </app-navbar>
 
 <div class="container-fluid px-0">
   <div class="row no-gutters">
@@ -13,17 +13,16 @@
         [style.background-image]="'url(' + show.bannerImage + ')'"
         class="jumbotron jumbotron-fluid"
       >
-        <div class="container-fluid"></div>
       </div>
 
       <div *ngIf="show">
 
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-sm-4">
               <img class="img-fluid" alt="{{show.title.english}} Cover Image" src="{{show.coverImage.extraLarge}}"/>
             </div>
-            <div class="col-md-8">
+            <div class="col-sm-8">
               <h2>{{show.title.english}}</h2>
 
               <div class="card">

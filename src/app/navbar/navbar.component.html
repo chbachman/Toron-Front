@@ -1,14 +1,14 @@
 <div class="container">
-  <header class="navbar navbar-dark fixed-top">
+  <header class="navbar navbar-dark fixed-top flex-nowrap">
     <a class="btn btn-outline-primary" routerLink="/">
       <fa-icon icon="arrow-left" size="lg"></fa-icon>
     </a>
 
     <ng-content></ng-content>
 
-    <a class="btn btn-outline-primary ml-auto">
+    <button type="button" class="btn btn-outline-primary ml-auto" (click)="open()">
       <fa-icon icon="cog" size="lg"></fa-icon>
-    </a>
+    </button>
   </header>
 
   <div id="navbar-buffer"></div>
