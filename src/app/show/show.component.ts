@@ -34,8 +34,6 @@ export class ShowComponent implements OnInit {
         this.getShows(parseInt(map.get('id'), 10))
       }
     })
-
-    this.settings.get<string>(Setting.RedditApp).subscribe(value => console.log(value))
   }
 
   getShows(id: number) {
