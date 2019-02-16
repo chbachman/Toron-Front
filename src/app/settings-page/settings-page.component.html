@@ -13,18 +13,24 @@
         <option>Narwhal</option>
       </select>
     </div>
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="analyticsOptOut" name="analytics" [(ngModel)]="analytics" (change)="change(Setting.Analytics, analytics)">
-      <label class="form-check-label" for="analyticsOptOut">
-        Analytics
-      </label>
-    </div>
     <div class="form-group">
       <label for="apiType">API Type</label>
       <select class="custom-select" id="apiType" name="api-type" [(ngModel)]="apiType" (change)="change(Setting.ApiType, apiType)">
         <option>AniList</option>
         <option>MyAnimeList</option>
       </select>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="analyticsOptOut" name="analytics" [(ngModel)]="analytics" (change)="change(Setting.Analytics, analytics)">
+      <label class="form-check-label" for="analyticsOptOut">
+        Analytics
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="creditShown" name="creditShown" [(ngModel)]="credit" (change)="change(Setting.CreditShown, credit)">
+      <label class="form-check-label" for="creditShown">
+        Credit Shown At Bottom
+      </label>
     </div>
   </form>
 

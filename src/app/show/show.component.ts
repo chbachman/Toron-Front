@@ -15,6 +15,7 @@ export class ShowComponent implements OnInit {
   show: ShowInfo
   discussions: Discussion[]
   rewatch: Discussion[]
+  footerEnabled: boolean
 
   rootPath = false
 
@@ -34,6 +35,8 @@ export class ShowComponent implements OnInit {
         this.getShows(parseInt(map.get('id'), 10))
       }
     })
+
+    this.settings.get<boolean>(Setting.CreditShown).subscribe(value => { this.footerEnabled = value })
   }
 
   getShows(id: number) {

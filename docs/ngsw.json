@@ -8,7 +8,7 @@
       "updateMode": "prefetch",
       "urls": [
         "/Toron-Front/index.html",
-        "/Toron-Front/main.6552f1f0bbee5a6dbc6f.js",
+        "/Toron-Front/main.e23e61848832aaaa867e.js",
         "/Toron-Front/polyfills.b79c9d41d08722089ce4.js",
         "/Toron-Front/runtime.b57bf819d5bdce77f1c7.js",
         "/Toron-Front/styles.bc6ea7511f2ea748b8ab.css"
@@ -74,8 +74,8 @@
     "/Toron-Front/assets/mstile-70x70.png": "a6bf883c85317762be44200b8e7b7db068044743",
     "/Toron-Front/assets/safari-pinned-tab.svg": "ed44e733701274e7d6d90bd26d70be956fdc500b",
     "/Toron-Front/assets/site.webmanifest": "b30e95df2ac9c058fb29a0da4000c0871d8807ad",
-    "/Toron-Front/index.html": "69a5ed2d84bd63335f3601402eab8f19faca94a6",
-    "/Toron-Front/main.6552f1f0bbee5a6dbc6f.js": "8de612a584534030703636fd18f4a1fccefe70dc",
+    "/Toron-Front/index.html": "a7d392a662c617c50c953b3bca644c209de3bc84",
+    "/Toron-Front/main.e23e61848832aaaa867e.js": "64c02a128da51ee4c2735b3be5989cb292e762ab",
     "/Toron-Front/polyfills.b79c9d41d08722089ce4.js": "6946e10a03311677a01490b8e91741668e64e17e",
     "/Toron-Front/runtime.b57bf819d5bdce77f1c7.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
     "/Toron-Front/styles.bc6ea7511f2ea748b8ab.css": "19647b03f434ecf6ce90519910a163500a264962"

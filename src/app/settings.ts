@@ -1,7 +1,8 @@
 export enum Setting {
   RedditApp = 'redditApp',
   Analytics = 'analytics',
-  ApiType = 'apiType'
+  ApiType = 'apiType',
+  CreditShown = 'creditShown'
 }
 
 export function getDefault(setting: Setting) {
@@ -9,5 +10,6 @@ export function getDefault(setting: Setting) {
     case Setting.RedditApp: return 'Reddit Website'
     case Setting.Analytics: return true
     case Setting.ApiType: return 'AniList'
+    case Setting.CreditShown: return true
   }
 }

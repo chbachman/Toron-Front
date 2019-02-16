@@ -1,7 +1,7 @@
 <app-navbar> <span id="title" class="text-truncate"> {{show?.title.english}} </span> </app-navbar>
 
 <div class="container-fluid px-0">
-  <div class="row no-gutters">
+  <div class="row no-gutters" [ngClass]="footerEnabled ? '' : 'footerHidden'">
     <div id="nav-list" class="col-scroll col-lg-4" [ngClass]="rootPath ? 'root-path' : ''">
       <app-nav-list [active]="show?.id"></app-nav-list>
     </div>
@@ -57,3 +57,4 @@
   </div>
 </div>
 
+<app-footer></app-footer>

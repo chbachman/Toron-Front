@@ -13,6 +13,7 @@ export class SettingsPageComponent implements OnInit, DoCheck {
   analytics: boolean
   redditApp: string
   apiType: string
+  credit: boolean
 
   constructor(public activeModal: NgbActiveModal, private settings: SettingsService) { }
 
@@ -29,11 +30,11 @@ export class SettingsPageComponent implements OnInit, DoCheck {
       .subscribe(value => this.redditApp = value)
     this.settings.get<string>(Setting.ApiType)
       .subscribe(value => this.apiType = value)
+    this.settings.get<boolean>(Setting.CreditShown)
+      .subscribe(value => this.credit = value)
   }
 
   change<T>(key: Setting, value: T) {
     this.settings.set(key, value)
   }
-
-
 }

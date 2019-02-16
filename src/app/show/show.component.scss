@@ -18,15 +18,17 @@
     display: inline-block;
   }
 
-  #show-detail {
-    height: calc(100vh - #{$navbar-collapsed-height});
-  }
-
   .row {
     .col-scroll {
-      height: calc(100vh - #{$navbar-collapsed-height});
+      height: calc(100vh - #{$navbar-collapsed-height} - #{$footer-height});
       overflow: hidden;
       overflow-y: scroll;
+    }
+  }
+
+  .row.footerHidden {
+    .col-scroll {
+      height: calc(100vh - #{$navbar-collapsed-height});
     }
   }
 }

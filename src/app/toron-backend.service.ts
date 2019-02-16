@@ -4,7 +4,6 @@ import { HttpClient } from '@angular/common/http'
 import { MALShow, Show, ShowInfo } from './show'
 import { NgForageCache } from 'ngforage'
 import { concatMap, map, tap } from 'rxjs/operators'
-import { Preference, ToronPreferencesService } from './toron-preferences.service'
 
 @Injectable({
   providedIn: 'root'

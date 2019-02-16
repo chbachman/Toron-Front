@@ -9,7 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faChevronRight, faCog, faArrowLeft, faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faChevronRight, faCog, faArrowLeft, faSearch, faHeart } from '@fortawesome/free-solid-svg-icons'
 import { faUser, faComment, faArrowAltCircleUp } from '@fortawesome/free-regular-svg-icons'
 
 import { AppRoutingModule } from './app-routing.module'
@@ -22,9 +22,10 @@ import { environment } from '../environments/environment'
 
 import { InViewportModule } from '@thisissoon/angular-inviewport'
 import { NavListComponent } from './nav-list/nav-list.component'
-import { ThreadComponent } from './thread/thread.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { ThreadComponent } from './thread/thread.component'
+import { NavbarComponent } from './navbar/navbar.component'
 import { SettingsPageComponent } from './settings-page/settings-page.component'
+import { FooterComponent } from './footer/footer.component'
 
 @NgModule({
   entryComponents: [
@@ -36,7 +37,8 @@ import { SettingsPageComponent } from './settings-page/settings-page.component'
     NavListComponent,
     ThreadComponent,
     NavbarComponent,
-    SettingsPageComponent
+    SettingsPageComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -59,6 +61,7 @@ import { SettingsPageComponent } from './settings-page/settings-page.component'
 export class AppModule {
   constructor() {
     library.add(
+      faHeart,
       faChevronRight,
       faCog,
       faUser,
