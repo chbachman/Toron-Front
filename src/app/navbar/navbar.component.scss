@@ -3,16 +3,21 @@
 @import '~bootstrap/scss/mixins';
 @import '~src/variables.scss';
 
+@function inset-top($value) {
+  @return calc(#{$value} + env(safe-area-inset-top, 0px));
+}
+
 header {
-  height: $navbar-collapsed-height;
+  height: inset-top(#{$navbar-collapsed-height});
 }
 
 #navbar-buffer {
-  margin-bottom: $navbar-collapsed-height;
+  margin-bottom: inset-top(#{$navbar-collapsed-height});
 }
 
 div.container {
   header {
+    padding-top: inset-top(0.5rem);
     background-color: $background-color;
     transition: background-color 0.5s;
   }

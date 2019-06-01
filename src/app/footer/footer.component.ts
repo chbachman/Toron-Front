@@ -11,7 +11,7 @@ export class FooterComponent implements OnInit {
 
   enabled: boolean
 
-  constructor(private settings: SettingsService) { }
+  constructor(private settings: SettingsService) {}
 
   ngOnInit() {
     this.settings.get<boolean>(Setting.CreditShown).subscribe(value => this.enabled = value)
