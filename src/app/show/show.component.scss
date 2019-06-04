@@ -2,6 +2,7 @@
 @import '~bootstrap/scss/variables';
 @import '~bootstrap/scss/mixins';
 @import '~src/variables';
+@import '~src/mixins';
 
 // Handle NavList
 #nav-list {
@@ -62,6 +63,11 @@
     visibility: hidden;
   }
 
+}
+
+.container-fluid {
+  @include inset-left(padding-left);
+  @include inset-right(padding-right);
 }
 
 // Handle Title

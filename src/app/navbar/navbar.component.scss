@@ -2,22 +2,22 @@
 @import '~bootstrap/scss/variables';
 @import '~bootstrap/scss/mixins';
 @import '~src/variables.scss';
-
-@function inset-top($value) {
-  @return calc(#{$value} + env(safe-area-inset-top, 0px));
-}
+@import '~src/mixins.scss';
 
 header {
-  height: inset-top(#{$navbar-collapsed-height});
+  @include inset-top(height, $navbar-collapsed-height);
 }
 
 #navbar-buffer {
-  margin-bottom: inset-top(#{$navbar-collapsed-height});
+  @include inset-top(margin-bottom, $navbar-collapsed-height);
 }
 
 div.container {
   header {
-    padding-top: inset-top(0.5rem);
+    @include inset-top(padding-top, 0.5rem);
+  }
+
+  header {
     background-color: $background-color;
     transition: background-color 0.5s;
   }

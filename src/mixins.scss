@@ -1,0 +1,40 @@
+@mixin inset-safe-area($side, $property, $value) {
+
+  @if $value != 0 {
+    #{$property}: $value;
+
+    @supports ($property: constant(#{$side})) {
+      #{$property}: calc(#{$value} + constant(#{$side}, #{$value}));
+    }
+
+    @supports ($property: env(#{$side})) {
+      #{$property}: calc(#{$value} + env(#{$side}, #{$value}));
+    }
+  } @else {
+    #{$property}: $value;
+
+    @supports ($property: constant(#{$side})) {
+      #{$property}: constant(#{$side}, #{$value});
+    }
+
+    @supports ($property: env(#{$side})) {
+      #{$property}: env(#{$side}, #{$value});
+    }
+  }
+}
+
+@mixin inset-top($property, $value: 0) {
+  @include inset-safe-area(safe-area-inset-top, $property, $value);
+}
+
+@mixin inset-right($property, $value: 0) {
+  @include inset-safe-area(safe-area-inset-right, $property, $value);
+}
+
+@mixin inset-left($property, $value: 0) {
+  @include inset-safe-area(safe-area-inset-left, $property, $value);
+}
+
+@mixin inset-bottom($property, $value: 0) {
+  @include inset-safe-area(safe-area-inset-bottom, $property, $value);
+}

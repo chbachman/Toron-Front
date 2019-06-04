@@ -2,9 +2,11 @@
 @import '~bootstrap/scss/variables';
 @import '~bootstrap/scss/mixins';
 @import '~src/variables';
+@import '~src/mixins';
 
 footer {
-  height: $footer-height;
+  @include inset-bottom(height, $footer-height);
+  @include inset-bottom(padding-bottom);
 
   a {
     flex-grow: 1;

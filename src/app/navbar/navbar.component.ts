@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit {
   }
 
   open() {
-    const modalRef = this.modalService.open(SettingsPageComponent, { size: 'lg' })
+    const modalRef = this.modalService.open(SettingsPageComponent, { size: 'lg', centered: true })
   }
 
 }
